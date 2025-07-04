@@ -1,0 +1,9 @@
+.head{
+    background-color: #0ABAB5;
+    text-align: center;
+    border-radius: 20px;
+}
+.head>h1{
+    font-size: 3rem;
+    font-family: Tektur;
+}
