@@ -83,3 +83,47 @@ footer {
     transform: translateY(0);
   }
 }
+
+
+
+/* Styles only for #projects-page section */
+#projects-page {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+#projects-page h3 {
+  color: #007bff;
+  margin-top: 30px;
+}
+
+#projects-page h3 a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#projects-page h3 a:hover {
+  text-decoration: underline;
+}
+
+#projects-page h4 {
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+#projects-page h4 a {
+  color: #333;
+  text-decoration: none;
+}
+
+#projects-page img {
+  display: block;
+  margin: 10px 0 20px 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+#projects-page img:hover {
+  border-color: #007bff;
+}
