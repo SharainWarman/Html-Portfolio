@@ -3,49 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sharain Warman - Portfolio</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+  <title>Sharain Warman - Web Developer & Cyber Security Student</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="head">
-    <h1>Sharain Warman</h1>
-    <p>Web Development & Cyber Security Student</p>
-    <nav>
-      <a href="./public/about.html">About</a> |
-      <a href="./my-project.html">Projects</a> |
-      <a href="./public/contact.html">Contact</a>
-    </nav>
-  </header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Sharain Warman</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="./my-project.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="./public/contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#first-projects">Journey</a></li>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am a student focused on Web Development and Cyber Security. I enjoy building responsive websites and learning about protecting digital systems from threats.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Portfolio Website:</strong> A personal webpage using HTML and CSS.</li>
-        <li><img src="./assets/images/image2.PNG" height="200" alt="HTML sample design project"></li>
-        <li><img src="./assets/images/birthday-invite.png" height="200" alt="Birthday invitation design"></li>
       </ul>
-    </section>
+    </div>
+  </div>
+</nav>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: sharainwarman259@gmail.com</p>
-      <p>GitHub: github.com/SharainWarman</p>
-    </section>
-  </main>
+<!-- Hero Section -->
+<header>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content text-center">
+    <h1>Sharain Warman</h1>
+    <p>Web Developer & Cyber Security Student</p>
+    <a href="#projects" class="btn btn-hero">See My Work</a>
+  </div>
+</header>
 
-  <footer>
-    <p>&copy; 2025 Sharain Warman. All rights reserved.</p>
-  </footer>
+<!-- About Section -->
+<section id="about" class="fade-in">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I am a beginner Web Developer and Cyber Security student. I enjoy building websites, learning coding, and exploring the world of digital security. I am eager to contribute, learn, and grow professionally.</p>
+  </div>
+</section>
 
+<!-- Projects Section -->
+<section id="projects" class="fade-in">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-card-3d">
+          <div class="card-inner">
+            <img src="./assets/images/image2.PNG" alt="Portfolio Project">
+            <div class="card-overlay">
+              <h5>Portfolio Website</h5>
+              <p>First personal portfolio using HTML, CSS, JS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card-3d">
+          <div class="card-inner">
+            <img src="./assets/images/birthday-invite.png" alt="Birthday Invitation">
+            <div class="card-overlay">
+              <h5>Birthday Invitation</h5>
+              <p>Creative invitation design project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="first-projects" class="fade-in py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">My First Projects</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="project-card-3d">
+          <div class="card-inner">
+            <img src="./basic-projects/html only.PNG" alt="Old Portfolio">
+            <div class="card-overlay">
+              <h5>Old Portfolio</h5>
+              <p>My first personal portfolio using HTML</p>
+              <a href="./basic-projects/index.html" class="btn btn-overlay">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card-3d">
+          <div class="card-inner">
+            <img src="./basic-projects/css.PNG" alt="Basic Website">
+            <div class="card-overlay">
+              <h5>my second portfolio site</h5>
+              <p>using with html and css</p>
+              <a href="./basic-projects/html+css/index.html" class="btn btn-overlay">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="fade-in">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:sharainwarman259@gmail.com">sharainwarman259@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/SharainWarman" target="_blank">github.com/SharainWarman</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Sharain Warman. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
 </body>
 </html>
