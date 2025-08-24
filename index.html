@@ -4,142 +4,467 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sharain Warman - Web Developer & Cyber Security Student Portfolio">
   <title>Sharain Warman - Web Developer & Cyber Security Student</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="cyberpunk-theme">
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Sharain Warman</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="./public/about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="./my-project.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="./public/contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="#first-projects">Journey</a></li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
+  <!-- Header/Navigation -->
   <header>
-    <canvas id="hero-canvas"></canvas>
-    <div class="hero-content text-center">
-      <h1>Sharain Warman</h1>
-      <p>Web Developer & Cyber Security Student</p>
-      <a href="#projects" class="btn btn-hero">See My Work</a>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Sharain Warman</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="fade-in">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div id="particles-js"></div>
     <div class="container">
-      <h2>About Me</h2>
-      <p>I am a beginner Web Developer and Cyber Security student. I enjoy building websites, learning coding, and
-        exploring the world of digital security. I am eager to contribute, learn, and grow professionally.</p>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="hero-content">
+            <h1>Sharain Warman</h1>
+            <h2>Web Developer & Cyber Security Student</h2>
+            <p>Creating secure, efficient, and user-friendly web applications with a passion for both development and
+              security.</p>
+            <a href="#projects" class="btn btn-hero">View My Work</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image">
+            <img src="./assets/images/ChatGPT Image Aug 24, 2025, 04_31_58 PM.png" alt="Sharain Warman" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="about-content">
+            <p>I am a passionate Web Developer and Cyber Security student with a strong interest in creating secure,
+              efficient, and user-friendly web applications. My journey in technology began with curiosity about how
+              websites work, which evolved into a passion for both building digital experiences and protecting them.</p>
+            <p>When I'm not coding, you can find me exploring new cybersecurity concepts, contributing to open-source
+              projects, or expanding my knowledge in ethical hacking and network security.</p>
+            <div class="about-details">
+              <div class="detail-item">
+                <h4>Education</h4>
+                <p>BIT Degree (In Progress)</p>
+                <p>Cyber Security Certification (In Progress) </p>
+                <p>Web Development Certification (In Progress)</p>
+              </div>
+              <div class="detail-item">
+                <h4>Certifications</h4>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-image">
+            <img src="https://placehold.co/500x400/0a192f/64ffda?text=Coding" alt="About Sharain Warman"
+              class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills fade-in">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Frontend Development</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>HTML/CSS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>JavaScript</span>
+              <span>10%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="10%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Bootstrap</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Network Skills Section -->
+        <div class="skill-category">
+          <h3><i class="fas fa-network-wired"></i> Network Skills</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>TCP/IP Protocols</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Network Troubleshooting</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="70%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>DNS Management</span>
+              <span>65%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="65%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hardware Skills Section -->
+        <div class="skill-category">
+          <h3><i class="fas fa-microchip"></i> Hardware Skills</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>PC Assembly & Repair</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Peripheral Setup</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Hardware Troubleshooting</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cybersecurity Skills Section -->
+
+        <div class="skill-category">
+          <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Network Security</span>
+              <span>0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="0%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Ethical Hacking</span>
+              <span>0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="0%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Security Analysis</span>
+              <span>0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="fade-in">
+  <section id="projects" class="projects fade-in">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="project-card-3d">
-            <div class="card-inner">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="project-card">
+            <div class="project-img">
               <img src="./assets/images/js.PNG" alt="Portfolio Project">
-              <div class="card-overlay">
-                <h5>Portfolio Website</h5>
-                <p>First personal portfolio using HTML, CSS, JS</p>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://sharainwarman.github.io/Html-Portfolio/"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/SharainWarman/Html-Portfolio"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Portfolio Website</h3>
+              <p>Personal portfolio using HTML, CSS, and JavaScript with interactive elements.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="project-card-3d">
-            <div class="card-inner">
-              <img src="./assets/images/birthday-invite.png" alt="Birthday Invitation">
-              <div class="card-overlay">
-                <h5>Birthday Invitation</h5>
-                <p>Creative invitation design project</p>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="./assets/images/first.PNG" alt="Birthday Invitation">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="./public/youtube/index.html"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/SharainWarman/first-website"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Basic Website</h3>
+              <p>Creative invitation design project with styles.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="./assets/images/recipe.PNG" alt="recipe">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="./public/recipe-page-main/index.html"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/SharainWarman/challenge-1"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Recipe project</h3>
+              <p>creative Recipe Page using HTML,CSS,Bootstrap</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="./assets/images/social.PNG" alt="Social media">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="./public/social-links-profile-main/index.html"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/SharainWarman/challenge-2"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Recipe project</h3>
+              <p>creative Social media linking Page using HTML,CSS,Bootstrap</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+        <a href="./my-project.html" class="btn btn-primary">
+            <i class="fas fa-arrow-right me-2"></i>View More Projects
+        </a>
+    </div>
+</div>
+
+
+
       </div>
     </div>
   </section>
-
-  <section id="first-projects" class="fade-in py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">My First Projects</h2>
-      <div class="row g-4">
-
-        <div class="col-md-4">
-          <div class="project-card-3d">
-            <div class="card-inner">
-              <img src="./basic-projects/html only.PNG" alt="Old Portfolio">
-              <div class="card-overlay">
-                <h5>Old Portfolio</h5>
-                <p>My first personal portfolio using HTML</p>
-                <a href="./basic-projects/index.html" class="btn btn-overlay">View Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="project-card-3d">
-            <div class="card-inner">
-              <img src="./basic-projects/css.PNG" alt="Basic Website">
-              <div class="card-overlay">
-                <h5>my second portfolio site</h5>
-                <p>using with html and css</p>
-                <a href="./basic-projects/html+css/index.html" class="btn btn-overlay">View Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
 
 
   <!-- Contact Section -->
-  <section id="contact" class="fade-in">
+  <section id="contact" class="contact fade-in">
     <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:sharainwarman259@gmail.com">sharainwarman259@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/SharainWarman" target="_blank">github.com/SharainWarman</a></p>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="contact-info">
+            <p>I'm currently looking for opportunities to apply my web development and cybersecurity skills. Whether you
+              have a question, want to collaborate, or just want to say hello, feel free to reach out!</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:sharainwarman259@gmail.com">sharainwarman259@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <div>
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/SharainWarman" target="_blank">github.com/SharainWarman</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Location</h4>
+                  <p>Available for remote work</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://github.com/SharainWarman" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-codepen"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sharain Warman. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Sharain Warman</h3>
+          <p>Web Developer & Cyber Security Student</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/SharainWarman" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-codepen"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sharain Warman. All rights reserved.</p>
+        <p>Designed and developed with ❤️</p>
+      </div>
+    </div>
+
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Particle.js for Background -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <!-- Custom JS -->
   <script src="script.js"></script>
