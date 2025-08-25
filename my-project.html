@@ -3,124 +3,215 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My Projects</title>
+   <meta name="description" content="Sharain Warman - Web Development Projects">
+   <title>My Projects - Sharain Warman</title>
 
    <!-- Bootstrap CSS -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
+   <!-- Font Awesome Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
    <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
    <!-- Custom CSS -->
    <link rel="stylesheet" href="./style.css"> 
 </head>
-<body>
+<body class="cyberpunk-theme">
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="./index.html">Sharain Warman</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Sharain Warman</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="./index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./my-project.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Projects Header -->
+  <section class="projects-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1>My Projects</h1>
+          <p class="lead">A collection of my web development projects showcasing various skills and technologies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section id="projects-page" class="fade-in py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="project-card-3d">
+            <div class="card-inner">
+              <img src="./assets/images/portfolio.PNG" alt="Portfolio Project">
+              <div class="card-overlay">
+                <h5>Portfolio Website</h5>
+                <p>Personal portfolio with responsive design</p>
+                <a href="./public/simple portfolio web/index.html" class="btn btn-overlay">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card-3d">
+            <div class="card-inner">
+              <img src="./assets/images/list.PNG" alt="List Project">
+              <div class="card-overlay">
+                <h5>List Project</h5>
+                <p>Interactive list application with CRUD functionality</p>
+                <a href="./public/list.html" class="btn btn-overlay">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card-3d">
+            <div class="card-inner">
+              <img src="./assets/images/nest.PNG" alt="Nest Project">
+              <div class="card-overlay">
+                <h5>Nest Project</h5>
+                <p>Nested elements and component-based design</p>
+                <a href="./public/nest.html" class="btn btn-overlay">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card-3d">
+            <div class="card-inner">
+              <img src="./assets/images/image2.PNG" alt="Cat Project">
+              <div class="card-overlay">
+                <h5>Cat Project</h5>
+                <p>Fun interactive cat-themed application</p>
+                <a href="./public/image2.html" class="btn btn-overlay">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card-3d">
+            <div class="card-inner">
+              <img src="./assets/images/dog.PNG" alt="Dog Project">
+              <div class="card-overlay">
+                <h5>Dog Project</h5>
+                <p>Dog breed gallery with interactive features</p>
+                <a href="./public/image.html" class="btn btn-overlay">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card-3d">
+            <div class="card-inner">
+              <img src="./assets/images/movie-ranking.png" alt="Movie Ranking Project">
+              <div class="card-overlay">
+                <h5>Movie Ranking</h5>
+                <p>Personal movie recommendation system</p>
+                <a href="./public/movie-ranking.html" class="btn btn-overlay">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card-3d">
+            <div class="card-inner">
+              <img src="./assets/images/birthday-invite.png" alt="Birthday Invite Project">
+              <div class="card-overlay">
+                <h5>Birthday Invite</h5>
+                <p>Creative birthday invitation design</p>
+                <a href="./public/birthday-invite.html" class="btn btn-overlay">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+
+        
+
+       
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2>Like What You See?</h2>
+          <p>I'm always working on new projects and improving my skills. Let's connect and discuss how we can work together!</p>
+          <a href="./index.html#contact" class="btn btn-hero">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Sharain Warman</h3>
+          <p>Web Developer & Cyber Security Student</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#about">About</a>
+          <a href="./my-project.html">Projects</a>
+          <a href="./index.html#contact">Contact</a>
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/SharainWarman" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-codepen"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sharain Warman. All rights reserved.</p>
+        <p>Designed and developed with ❤️</p>
+      </div>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="./public/about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="./my-project.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="./public/contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </footer>
 
-<section id="projects-page" class="fade-in py-5">
-  <div class="container">
-    <h2 class="text-center mb-5">My Projects</h2>
-    <div class="row g-4">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-      <div class="col-md-4">
-        <div class="project-card-3d">
-          <div class="card-inner">
-            <img src="./assets/images/list.PNG" alt="List Project">
-            <div class="card-overlay">
-              <h5>List Project</h5>
-              <a href="./public/list.html" class="btn btn-overlay">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card-3d">
-          <div class="card-inner">
-            <img src="./assets/images/nest.PNG" alt="Nest Project">
-            <div class="card-overlay">
-              <h5>Nest Project</h5>
-              <a href="./public/nest.html" class="btn btn-overlay">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card-3d">
-          <div class="card-inner">
-            <img src="./assets/images/image2.PNG" alt="Cat Project">
-            <div class="card-overlay">
-              <h5>Cat Project</h5>
-              <a href="./public/image2.html" class="btn btn-overlay">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card-3d">
-          <div class="card-inner">
-            <img src="./assets/images/dog.PNG" alt="Dog Project">
-            <div class="card-overlay">
-              <h5>Dog Project</h5>
-              <a href="./public/image.html" class="btn btn-overlay">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card-3d">
-          <div class="card-inner">
-            <img src="./assets/images/movie-ranking.png" alt="Movie Ranking Project">
-            <div class="card-overlay">
-              <h5>Movie Ranking</h5>
-              <a href="./public/movie-ranking.html" class="btn btn-overlay">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card-3d">
-          <div class="card-inner">
-            <img src="./assets/images/birthday-invite.png" alt="Birthday Invite Project">
-            <div class="card-overlay">
-              <h5>Birthday Invite</h5>
-              <a href="./public/birthday-invite.html" class="btn btn-overlay">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="mt-5">
-  <p class="text-center">&copy; 2025 Sharain Warman. All rights reserved.</p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./script.js"></script>
+  <!-- Custom JS -->
+  <script src="./script.js"></script>
 </body>
 </html>

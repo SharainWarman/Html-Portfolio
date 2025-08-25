@@ -392,3 +392,54 @@ window.addEventListener('scroll', function() {
     navbar.style.backgroundColor = 'rgba(15, 17, 26, 0.9)';
   }
 });
+
+// Initialize projects page specific functionality
+function initProjectsPage() {
+  // Add specific projects page functionality here
+  console.log("Projects page initialized");
+  
+  // Add animation to project cards on scroll
+  const projectCards = document.querySelectorAll('.project-card-3d');
+  
+  const cardOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const cardObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, cardOptions);
+  
+  projectCards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    cardObserver.observe(card);
+  });
+}
+
+// Update your existing DOMContentLoaded function
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if we're on the projects page
+  if (document.getElementById('projects-page')) {
+    initProjectsPage();
+  }
+  
+  // Your other initializations
+  initParticles();
+  initThemeToggle();
+  initScrollAnimations();
+  initSkillBars();
+  initBackToTop();
+  initContactForm();
+  initSmoothScrolling();
+  initEditMode();
+  loadContent();
+  initCertificateModal();
+});

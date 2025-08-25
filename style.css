@@ -751,3 +751,136 @@ a:hover {
     padding: 1.5rem;
   }
 }
+
+
+/* Projects Header */
+.projects-header {
+  padding: 120px 0 60px;
+  background: var(--secondary-bg);
+  text-align: center;
+}
+
+.projects-header h1 {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px var(--accent-color);
+}
+
+.projects-header .lead {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Project Cards Enhancements */
+.project-card-3d {
+  perspective: 1000px;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 15px 35px var(--shadow-color);
+  border-radius: 15px;
+}
+
+.project-card-3d:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.light-theme .card-overlay {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.card-overlay h5 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-overlay p {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-overlay {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-overlay:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+}
+
+/* Call to Action Section */
+.cta-section {
+  background: var(--secondary-bg);
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: var(--accent-secondary);
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design for Projects Page */
+@media (max-width: 768px) {
+  .projects-header {
+    padding: 100px 0 40px;
+  }
+  
+  .projects-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .project-card-3d {
+    height: 250px;
+  }
+}
