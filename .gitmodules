@@ -7,9 +7,5 @@
 [submodule "challenge-2"]
 	path = challenge-2
 	url = https://github.com/SharainWarman/challenge-2
-[submodule "public/Bento-Grid"]
-	path = public/Bento-Grid
-	url = https://github.com/SharainWarman/Bento-Grid
-[submodule "Bento-Grid"]
-	path = Bento-Grid
-	url = https://github.com/SharainWarman/Bento-Grid
+
+
