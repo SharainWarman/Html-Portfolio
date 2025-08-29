@@ -10,3 +10,6 @@
 [submodule "public/Bento-Grid"]
 	path = public/Bento-Grid
 	url = https://github.com/SharainWarman/Bento-Grid
+[submodule "Bento-Grid"]
+	path = Bento-Grid
+	url = https://github.com/SharainWarman/Bento-Grid
