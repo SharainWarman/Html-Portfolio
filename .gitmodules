@@ -9,3 +9,6 @@
 	url = https://github.com/SharainWarman/challenge-2
 
 
+[submodule "public/Bento-Grid"]
+	path = public/Bento-Grid
+	url = https://github.com/SharainWarman/Bento-Grid
