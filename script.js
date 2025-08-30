@@ -424,22 +424,3 @@ function initProjectsPage() {
   });
 }
 
-// Update your existing DOMContentLoaded function
-document.addEventListener('DOMContentLoaded', function() {
-  // Check if we're on the projects page
-  if (document.getElementById('projects-page')) {
-    initProjectsPage();
-  }
-  
-  // Your other initializations
-  initParticles();
-  initThemeToggle();
-  initScrollAnimations();
-  initSkillBars();
-  initBackToTop();
-  initContactForm();
-  initSmoothScrolling();
-  initEditMode();
-  loadContent();
-  initCertificateModal();
-});
