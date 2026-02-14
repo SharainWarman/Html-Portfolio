@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Understanding OSINT (Open Source Intelligence) - sources, process, tools, and ethical use." />
+  <title>Understanding OSINT | Sharain Warman</title>
+
+  <!-- Bootstrap (for tables + layout) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome (optional, for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Your theme CSS -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <!-- Theme Toggle (works with your script2.js) -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Simple Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">Sharain Warman</a>
+
+      <div class="ms-auto d-flex gap-2">
+        <a class="btn btn-primary" href="/blog.html" style="padding: 8px 14px;">
+          <i class="fas fa-arrow-left me-2"></i>Back to Blog
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="projects-header">
+    <div class="container">
+      <h1>Understanding OSINT</h1>
+      <p class="lead">Open Source Intelligence (OSINT) — sources, process, tools, and ethical use</p>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="about fade-in visible">
+    <div class="container">
+
+      <div class="mb-4 p-4 rounded" style="background: rgba(10, 25, 47, 0.65); border: 1px solid rgba(100,255,218,0.15);">
+        <p class="mb-0">
+          <strong>Ethical Note:</strong> OSINT uses <strong>publicly available</strong> information only.
+          Do not hack, bypass logins, or invade privacy.
+        </p>
+      </div>
+
+      <h2>1. Introduction</h2>
+      <p>
+        <strong>OSINT</strong> stands for <strong>Open Source Intelligence</strong>.
+        It refers to collecting and analyzing information from publicly available sources such as
+        websites, social media, news, forums, and public records.
+      </p>
+
+      <p><strong>OSINT is widely used in:</strong></p>
+      <ul>
+        <li>Cybersecurity</li>
+        <li>Law enforcement</li>
+        <li>Journalism</li>
+        <li>Business intelligence</li>
+        <li>Ethical hacking</li>
+      </ul>
+
+      <p>
+        The collected information helps in analysis, investigation, and decision-making.
+      </p>
+
+      <hr class="my-4" />
+
+      <h2>2. What is Open Source Information?</h2>
+      <p>Open source information is data that is:</p>
+      <ul>
+        <li>Legally available to the public</li>
+        <li>Free or accessible without hacking</li>
+        <li>Shared openly on the internet or in public databases</li>
+      </ul>
+
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Social media profiles</li>
+        <li>Websites and blogs</li>
+        <li>Public government records</li>
+        <li>Online maps</li>
+        <li>News articles</li>
+      </ul>
+
+      <hr class="my-4" />
+
+      <h2>3. Importance of OSINT</h2>
+      <p>OSINT helps to:</p>
+      <ul>
+        <li>Identify threats and risks</li>
+        <li>Support investigations related to cyber attacks</li>
+        <li>Find digital footprints</li>
+        <li>Verify identities</li>
+        <li>Collect evidence legally</li>
+        <li>Improve security awareness</li>
+      </ul>
+
+      <hr class="my-4" />
+
+      <h2>4. Types of OSINT Sources</h2>
+
+      <h3>🌐 Internet Sources</h3>
+      <ul>
+        <li>Google Search</li>
+        <li>Websites</li>
+        <li>Forums</li>
+        <li>Blogs</li>
+        <li>Online news</li>
+      </ul>
+
+      <h3>📱 Social Media</h3>
+      <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>LinkedIn</li>
+        <li>Twitter (X)</li>
+      </ul>
+
+      <h3>🗂 Public Records</h3>
+      <ul>
+        <li>Company registrations</li>
+        <li>Domain records (WHOIS)</li>
+        <li>Court records</li>
+        <li>Government databases</li>
+      </ul>
+
+      <h3>🗺 Geographical Data</h3>
+      <ul>
+        <li>Google Maps</li>
+        <li>Satellite images</li>
+        <li>Location tagging</li>
+      </ul>
+
+      <hr class="my-4" />
+
+      <h2>5. OSINT Tools (Overview)</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead>
+            <tr>
+              <th style="width: 35%;">Tool Name</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Google Dorking</td><td>Advanced search techniques</td></tr>
+            <tr><td>Maltego</td><td>Link analysis / relationship mapping</td></tr>
+            <tr><td>Shodan</td><td>Discover internet-connected devices</td></tr>
+            <tr><td>Have I Been Pwned</td><td>Check data breaches</td></tr>
+            <tr><td>WHOIS</td><td>Domain registration information</td></tr>
+            <tr><td>Recon-ng</td><td>Reconnaissance framework</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="my-4" />
+
+      <h2>6. OSINT Process</h2>
+      <ol>
+        <li><strong>Define Objective</strong> – Decide what information is needed</li>
+        <li><strong>Collect Data</strong> – Gather data from public sources</li>
+        <li><strong>Filter &amp; Verify</strong> – Remove false or irrelevant information</li>
+        <li><strong>Analyze Data</strong> – Identify patterns and insights</li>
+        <li><strong>Report</strong> – Document findings clearly</li>
+      </ol>
+
+      <hr class="my-4" />
+
+      <h2>7. Legal and Ethical Considerations</h2>
+      <ul>
+        <li>Use only publicly available information</li>
+        <li>Do not hack, bypass access controls, or invade privacy</li>
+        <li>Follow your country’s laws and cyber regulations</li>
+        <li>Use information responsibly and professionally</li>
+      </ul>
+
+      <hr class="my-4" />
+
+      <h2>8. Advantages and Disadvantages</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="p-3 rounded" style="background: rgba(0, 255, 255, 0.07); border: 1px solid rgba(100,255,218,0.15);">
+            <h3 class="mb-2">✅ Advantages</h3>
+            <ul class="mb-0">
+              <li>Free and legal (when used correctly)</li>
+              <li>Large amount of available data</li>
+              <li>Easy to access</li>
+              <li>Useful for research and security</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 rounded" style="background: rgba(255, 107, 107, 0.08); border: 1px solid rgba(255,107,107,0.25);">
+            <h3 class="mb-2">❌ Disadvantages</h3>
+            <ul class="mb-0">
+              <li>Fake or misleading information is possible</li>
+              <li>Time-consuming</li>
+              <li>Information overload</li>
+              <li>Privacy concerns (must be handled ethically)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <h2>9. Conclusion</h2>
+      <p>
+        OSINT is a powerful method to collect intelligence using open sources.
+        When used ethically and legally, it improves cybersecurity, investigations,
+        and research quality.
+      </p>
+
+      <hr class="my-4" />
+
+      <h2>10. References</h2>
+      <ul>
+        <li><a href="https://osintframework.com" target="_blank" rel="noopener">https://osintframework.com</a></li>
+        <li><a href="https://www.shodan.io" target="_blank" rel="noopener">https://www.shodan.io</a></li>
+        <li>Cybersecurity textbooks and trusted online articles</li>
+      </ul>
+
+      <hr class="my-5" />
+
+      <h2>OSINT Tools with Usage</h2>
+
+      <!-- 1. Google Dorking -->
+      <h3>1) Google Dorking</h3>
+      <p>
+        <strong>Google Dorking</strong> (also known as “Google Hacking”) uses advanced Google search operators
+        to locate information that may not be easy to find through normal searches.
+        Security professionals use it to identify exposed files, misconfigured servers, and potential vulnerabilities.
+      </p>
+      <p class="mb-2"><strong>Important:</strong> Using search operators to view publicly indexed content is generally legal.
+        Using results to break into systems or access private data is illegal.
+      </p>
+
+      <h4>Google Dorking Operators</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Operator</th>
+              <th>Description</th>
+              <th style="width: 30%;">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>allintext</td><td>Find pages containing all keywords in the page text</td><td><code>allintext:"keyword"</code></td></tr>
+            <tr><td>intext</td><td>Find pages containing a keyword in the page text</td><td><code>intext:"keyword"</code></td></tr>
+            <tr><td>inurl</td><td>Find pages with a keyword in the URL</td><td><code>inurl:"admin"</code></td></tr>
+            <tr><td>allinurl</td><td>Find pages where all keywords appear in the URL</td><td><code>allinurl:"admin login"</code></td></tr>
+            <tr><td>allintitle</td><td>Find pages where all keywords appear in the title</td><td><code>allintitle:"index of"</code></td></tr>
+            <tr><td>site</td><td>Limit results to a specific domain/website</td><td><code>site:example.com</code></td></tr>
+            <tr><td>filetype</td><td>Find results of a specific file type</td><td><code>filetype:pdf</code></td></tr>
+            <tr><td>link</td><td>Find pages that link to a given URL (limited use today)</td><td><code>link:example.com</code></td></tr>
+            <tr><td>numrange</td><td>Find results containing numbers within a range</td><td><code>numrange:321-325</code></td></tr>
+            <tr><td>before / after</td><td>Search within a date range (often used with other operators)</td><td><code>before:2024-01-01 after:2023-01-01</code></td></tr>
+            <tr><td>inanchor</td><td>Find pages with keywords in anchor text (links)</td><td><code>inanchor:"keyword"</code></td></tr>
+            <tr><td>allinanchor</td><td>All keywords must be in anchor text</td><td><code>allinanchor:"keyword"</code></td></tr>
+            <tr><td>inpostauthor</td><td>Blog search operator for author (works where supported)</td><td><code>inpostauthor:"name"</code></td></tr>
+            <tr><td>allinpostauthor</td><td>Blog search operator for author (all terms)</td><td><code>allinpostauthor:"name"</code></td></tr>
+            <tr><td>related</td><td>Find websites similar to a given website</td><td><code>related:example.com</code></td></tr>
+            <tr><td>cache</td><td>Show Google’s cached version of a page</td><td><code>cache:example.com</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Combining Operators</h4>
+      <ul>
+        <li><code>site:</code> limits to a domain (example: <code>site:example.com</code>)</li>
+        <li><code>filetype:</code> or <code>ext:</code> finds specific file extensions (example: <code>filetype:pdf</code>)</li>
+        <li><code>inurl:</code> finds keywords in the URL (example: <code>inurl:admin</code>)</li>
+        <li><code>intitle:</code> finds keywords in the title (example: <code>intitle:"index of"</code>)</li>
+        <li><code>intext:</code> finds keywords in page text (example: <code>intext:password</code>)</li>
+        <li><code>cache:</code> shows cached version</li>
+        <li><code>-</code> excludes terms/sites (example: <code>-site:youtube.com</code>)</li>
+      </ul>
+
+      <h4>Common Use Cases (Educational)</h4>
+      <ul>
+        <li>Finding exposed login pages: <code>inurl:admin login</code> or <code>inurl:login.php</code></li>
+        <li>Finding sensitive files: <code>filetype:env "DB_PASSWORD"</code> (for awareness/auditing)</li>
+        <li>Open directories: <code>intitle:"index of" "backup"</code></li>
+        <li>Vulnerable plugins: <code>inurl:/wp-content/plugins/</code></li>
+        <li>Credential leaks (awareness): <code>filetype:txt inurl:password</code></li>
+      </ul>
+
+      <h4>Protecting Against Google Dorking</h4>
+      <ul>
+        <li><strong>robots.txt</strong> (limit crawling of sensitive paths)</li>
+        <li><strong>noindex</strong> tags for pages you don’t want indexed</li>
+        <li>Disable directory listing on Apache/Nginx</li>
+        <li>Audit your own domain with safe dork queries</li>
+      </ul>
+
+      <h4>How to Use (Simple Steps)</h4>
+      <ol>
+        <li>Open Google</li>
+        <li>Type a search operator query (example: <code>site:example.com filetype:pdf</code>)</li>
+        <li>Analyze the search results</li>
+      </ol>
+
+      <hr class="my-4" />
+
+      <!-- 2. Shodan -->
+      <h3>2) Shodan.io</h3>
+      <p>
+        <strong>Shodan</strong> is a search engine that discovers internet-connected devices such as routers, servers,
+        webcams, and industrial systems by collecting public “banner” information (open ports, services, versions, and headers).
+      </p>
+
+      <h4>What it does</h4>
+      <ul>
+        <li><strong>Device discovery:</strong> Finds IoT and internet-connected systems</li>
+        <li><strong>Metadata indexing:</strong> Collects banners, HTTP headers, SSL certificate data, etc.</li>
+        <li><strong>Exposure detection:</strong> Helps identify misconfigurations or outdated services</li>
+        <li><strong>Advanced filtering:</strong> Search by country, org, port, service, and more</li>
+      </ul>
+
+      <h4>How it’s used</h4>
+      <ul>
+        <li>Cybersecurity: recon, asset discovery, threat intelligence</li>
+        <li>Research: internet trends, device exposure, C2 tracking</li>
+        <li>Ethical hacking: identify exposure (only with permission)</li>
+      </ul>
+
+      <h4>How to use</h4>
+      <ol>
+        <li>Open <a href="https://www.shodan.io" target="_blank" rel="noopener">shodan.io</a></li>
+        <li>Create a free account (optional but helpful)</li>
+        <li>Search for a keyword (example: <code>router</code>, <code>webcam</code>) or an IP address</li>
+        <li>View open ports, location, and device/service details</li>
+      </ol>
+
+      <hr class="my-4" />
+
+      <!-- 3. Maltego -->
+      <h3>3) Maltego</h3>
+      <p>
+        <strong>Maltego</strong> is an investigation platform used to mine, merge, and map data for OSINT and cyber investigations.
+        It helps reveal connections between people, organizations, domains, and digital footprints.
+      </p>
+
+      <h4>Core functionality</h4>
+      <ul>
+        <li><strong>Visualization:</strong> Node-based graph of relationships</li>
+        <li><strong>Transforms:</strong> Built-in queries/plugins to pull data from sources</li>
+        <li><strong>Data sources:</strong> Many connectors and datasets (some require accounts/keys)</li>
+      </ul>
+
+      <h4>Common use cases</h4>
+      <ul>
+        <li>Cybersecurity: map attack surface, threat actor research</li>
+        <li>Law enforcement: criminal network investigation</li>
+        <li>Fraud & compliance: KYC support and relationship mapping</li>
+      </ul>
+
+      <h4>Versions</h4>
+      <ul>
+        <li><strong>Community Edition (CE):</strong> Free with limitations</li>
+        <li><strong>Professional/Enterprise:</strong> Paid plans with more features</li>
+      </ul>
+
+      <h4>How to use</h4>
+      <ol>
+        <li>Download and install Maltego</li>
+        <li>Open the software</li>
+        <li>Enter a target (domain / email / name)</li>
+        <li>Right-click → Run Transform</li>
+        <li>Review results in graph format</li>
+      </ol>
+
+      <hr class="my-4" />
+
+      <!-- 4. HIBP -->
+      <h3>4) Have I Been Pwned</h3>
+      <p>
+        <strong>Have I Been Pwned (HIBP)</strong> is a trusted service created by security researcher <strong>Troy Hunt</strong>
+        that helps users check whether their email, phone number, or passwords have appeared in known data breaches.
+      </p>
+
+      <h4>Key features</h4>
+      <ul>
+        <li>Email breach search</li>
+        <li>Pwned Passwords (checks if a password appeared in breaches)</li>
+        <li>Domain breach monitoring (useful for organizations)</li>
+        <li>Notifications/alerts for future breaches</li>
+      </ul>
+
+      <h4>How to use</h4>
+      <ol>
+        <li>Open <a href="https://haveibeenpwned.com" target="_blank" rel="noopener">haveibeenpwned.com</a></li>
+        <li>Enter an email address</li>
+        <li>Click search/check</li>
+        <li>Review breach details and affected data types</li>
+      </ol>
+
+      <hr class="my-4" />
+
+      <!-- 5. VirusTotal -->
+      <h3>5) VirusTotal</h3>
+      <p>
+        <strong>VirusTotal</strong> is an online service (owned by Google) that analyzes files, URLs, domains, and IP addresses
+        using many antivirus engines and threat feeds. It is commonly used to validate suspicious links and files.
+      </p>
+
+      <h4>Key features</h4>
+      <ul>
+        <li>Multi-engine scanning (files/URLs)</li>
+        <li>Detailed reports with vendors’ detections</li>
+        <li>Domain/IP analysis and community intelligence</li>
+        <li>API access (public API has rate limits)</li>
+      </ul>
+
+      <h4>How to use</h4>
+      <ol>
+        <li>Open <a href="https://www.virustotal.com" target="_blank" rel="noopener">virustotal.com</a></li>
+        <li>Upload a file OR paste a URL</li>
+        <li>Click scan/analyze</li>
+        <li>Review detections and details</li>
+      </ol>
+
+      <hr class="my-4" />
+
+      <!-- 6. Censys -->
+      <h3>6) Censys</h3>
+      <p>
+        <strong>Censys</strong> is an internet intelligence platform that scans the internet to discover servers, websites,
+        IP addresses, open ports, SSL certificates, and exposed services. It only collects publicly visible data.
+      </p>
+
+      <h4>Purpose</h4>
+      <ul>
+        <li>Identify exposed servers and services</li>
+        <li>Analyze domains and IP addresses</li>
+        <li>Detect misconfigured systems</li>
+        <li>Study internet-wide security trends</li>
+      </ul>
+
+      <h4>How to use (step-by-step)</h4>
+      <ol>
+        <li>Open <a href="https://censys.io" target="_blank" rel="noopener">censys.io</a></li>
+        <li>Create a free account or log in</li>
+        <li>Search a domain, IP, or service (example: <code>example.com</code> / <code>8.8.8.8</code> / <code>https</code>)</li>
+        <li>Review results: open ports, services, certificates, hosting/provider, country</li>
+        <li>Open a result for more details (protocols, software versions, TLS info)</li>
+      </ol>
+
+      <h4>Quick demo example</h4>
+      <p>
+        Search a well-known domain (e.g., <code>google.com</code>) and explain that big websites use multiple IPs,
+        HTTPS services, and valid SSL certificates.
+      </p>
+
+      <hr class="my-4" />
+
+      <!-- 7. WHOIS -->
+      <h3>7) WHOIS</h3>
+      <p>
+        <strong>WHOIS</strong> is a public directory that provides information about domain registrations and related records.
+        When someone registers a domain, details are stored in WHOIS (often privacy-protected).
+      </p>
+
+      <h4>What WHOIS can show</h4>
+      <ul>
+        <li>Registrar company</li>
+        <li>Registration/creation date</li>
+        <li>Expiration date</li>
+        <li>Name servers</li>
+        <li>Domain status</li>
+        <li>Sometimes owner details (if not privacy protected)</li>
+      </ul>
+
+      <h4>How to use</h4>
+      <p><strong>Method 1 (Website):</strong></p>
+      <ol>
+        <li>Open a WHOIS lookup site (example: whois.domaintools.com)</li>
+        <li>Enter a domain name</li>
+        <li>View registrar, dates, nameservers, and status</li>
+      </ol>
+
+      <p><strong>Method 2 (Command line):</strong></p>
+      <pre><code>whois example.com</code></pre>
+
+      <p><strong>Note:</strong> Many domains use privacy protection, so owner details may be hidden.</p>
+
+      <hr class="my-4" />
+
+      <!-- 8. Wayback Machine -->
+      <h3>8) Wayback Machine</h3>
+      <p>
+        The <strong>Wayback Machine</strong> (Internet Archive) stores historical snapshots of websites.
+        It helps you view older versions of a website—even if the content was later removed.
+      </p>
+
+      <h4>Why it’s useful in OSINT</h4>
+      <ul>
+        <li>View deleted web pages</li>
+        <li>Analyze changes over time</li>
+        <li>Investigate scam/fake sites history</li>
+        <li>Recover removed content</li>
+        <li>Track company history</li>
+      </ul>
+
+      <h4>How to use</h4>
+      <ol>
+        <li>Open <a href="https://archive.org" target="_blank" rel="noopener">archive.org</a></li>
+        <li>Enter a website URL (example: <code>example.com</code>)</li>
+        <li>Select a year from the timeline</li>
+        <li>Choose a highlighted date</li>
+        <li>Browse the archived version</li>
+      </ol>
+
+      <h4>Limitations</h4>
+      <ul>
+        <li>Not every website is archived</li>
+        <li>Some pages may not load fully</li>
+        <li>Dynamic content may not be captured</li>
+      </ul>
+
+      <hr class="my-4" />
+
+      <!-- 9. theHarvester -->
+      <h3>9) theHarvester</h3>
+      <p>
+        <strong>theHarvester</strong> is an OSINT tool for collecting emails, subdomains, IP addresses, and names from public sources.
+        It is commonly used during the reconnaissance phase of security assessments.
+      </p>
+
+      <h4>How to use (command line)</h4>
+      <pre><code>theHarvester -d example.com -b google</code></pre>
+
+      <p><strong>Command explanation:</strong></p>
+      <ul>
+        <li><code>-d</code> → Target domain</li>
+        <li><code>-b</code> → Data source (google, bing, linkedin, etc.)</li>
+      </ul>
+
+      <h4>What the output shows</h4>
+      <ul>
+        <li>Emails found</li>
+        <li>Subdomains discovered</li>
+        <li>Hosts / IP addresses</li>
+      </ul>
+
+      <hr class="my-4" />
+
+      <!-- 10. SpiderFoot -->
+      <h3>10) SpiderFoot</h3>
+      <p>
+        <strong>SpiderFoot</strong> is an automated OSINT tool that collects data about targets such as domains, IPs,
+        emails, subdomains, breaches, and social accounts. It generates structured reports and dashboards.
+      </p>
+
+      <h4>How to use (step-by-step)</h4>
+      <ol>
+        <li>Install SpiderFoot (Windows/Linux/Kali)</li>
+        <li>Start the web UI:</li>
+      </ol>
+
+      <pre><code>python3 sf.py -l 127.0.0.1:5001</code></pre>
+
+      <ol start="3">
+        <li>Open: <code>http://127.0.0.1:5001</code></li>
+        <li>Click <strong>New Scan</strong></li>
+        <li>Enter target (example: <code>example.com</code>)</li>
+        <li>Select scan type and start the scan</li>
+        <li>Review categorized results and dashboard summary</li>
+      </ol>
+
+      <h4>Advantages</h4>
+      <ul>
+        <li>Fully automated reconnaissance</li>
+        <li>Easy web interface</li>
+        <li>Saves time and generates reports</li>
+      </ul>
+
+      <h4>Limitations</h4>
+      <ul>
+        <li>Some modules require API keys</li>
+        <li>Large scans may take time</li>
+      </ul>
+
+      <hr class="my-5" />
+
+      <div class="d-flex flex-wrap gap-2">
+        <a href="/blog.html" class="btn btn-primary">
+          <i class="fas fa-arrow-left me-2"></i>Back to Blog
+        </a>
+        <a href="/index.html" class="btn btn-primary">
+          <i class="fas fa-home me-2"></i>Portfolio Home
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bootstrap JS (optional, but nice to keep) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your secondary page script -->
+  <script src="/script2.js"></script>
+</body>
+</html>
